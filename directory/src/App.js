@@ -1,18 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/Header'
-import PageBody from './components/PageBody'
-import Wrapper from './components/Wrapper'
+import React from "react";
+import Main from "./components/Main";
+import Wrapper from "./components/Wrapper";
+import Header from "./components/Header";
+
+import "./App.css";
 
 function App() {
   return (
-   <Wrapper>
-     <Header>
-     </Header>
-     
-     <PageBody>
-     </PageBody>
-   </Wrapper>
+    <div className="App">
+      <Wrapper>
+        <Header />
+        {/* //header is self contained */}
+        <Main />
+        {/* //main will hold data */}
+      </Wrapper>
+      {/* //wrapper holds all components */}
+    </div>
   );
 }
 
