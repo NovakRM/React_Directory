@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import UserContext from "../utils/UserContext";
-// import "../styles/Main.css";
 
 function Nav (){
     return(

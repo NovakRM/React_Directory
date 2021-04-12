@@ -1,9 +1,9 @@
-import React from "react";
-import Main from "./components/Main";
-import Wrapper from "./components/Wrapper";
-import Header from "./components/Header";
+import React from "react"
+import Main from "./components/Main"
+import Wrapper from "./components/Wrapper"
+import Header from "./components/Header"
 
-// import "./App.css";
+// import "./App.css"
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       </Wrapper>
       {/* //wrapper holds all components */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
