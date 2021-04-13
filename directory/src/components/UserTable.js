@@ -8,9 +8,8 @@ const UserTable = () => {
 
   return (
 
-    <div className="UserTable">
-      <table id="table" className="table table-bordered table-sm"
-      >
+    <div className="UserTable table-responsive">
+      <table id="table" className="table table-bordered">
         <thead>
           <tr>
             {context.userState.userProperties.map(({ name }) => {
@@ -22,9 +21,9 @@ const UserTable = () => {
                   onClick={() => {
                     context.sortUsers(name)
                   }}
-                >
-                  {name}
-                  <span></span>
+                > 
+                {name}
+                <span data-value="name">▼</span>
                 </th>
               )
             })}

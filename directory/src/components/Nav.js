@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
-import UserContext from "../utils/UserContext";
+import UserContext from "../utils/UserContext"
 
-function Nav (){
+const Nav = () => {
+    const context = useContext(UserContext);
+
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <button 
-            className="navbar-toggler" 
-            type="button" 
-            data-toggle="collapse" 
+            className="navbar-toggler" type="button" data-toggle="collapse" 
             data-target="#navbarNav" 
             aria-controls="navbarNav" 
             aria-expanded="false" 
             aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
             <div className="searchbox">
@@ -27,13 +27,13 @@ function Nav (){
                         type="search"
                         placeholder="name"
                         aria-label="Search"
-                        onChange={e => context.handleSearchChange(e)}
+                        onChange={e => context.userSearch(e)}
                     />
                 </div>
             </div>
         </div>
-      </nav>
+    </nav>
     )
 }
-//Nav scaffolds search functionality together
+//Nav scaffolds search functionality together, contains both element and the call for search by name
 export default Nav

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-// import Nav from "./Nav"
+import Nav from "./Nav"
 import API from "../utils/API"
 import UserContext from "../utils/UserContext"
 import UserTable from "./UserTable"
@@ -34,7 +34,6 @@ const HandleUsers = () =>{
 
     const orderFilter = (a, d) => {
       if (currentOrder === "ascend") {
-        // account for missing values
         if (a[user] === undefined) {
           return 1
         } else if (d[user] === undefined) {
@@ -68,7 +67,7 @@ const HandleUsers = () =>{
         setUserState({ ...userState, searchFilter: filteredList })
       }
 
-    useEffect(() => {
+    useEffect(() => { //useEffect means this API request will only fire once
         API.getUsers().then(res => {
           console.log(res.data.results)
           setUserState({
@@ -83,7 +82,7 @@ const HandleUsers = () =>{
         <UserContext.Provider
             value={{ userState, userSearch, sortUsers }}
         >
-        {/* <Nav /> */}
+        <Nav />
         <div>
           {userState.searchFilter.length > 0 ? <UserTable /> : <div></div>}
         </div>
